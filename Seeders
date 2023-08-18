@@ -1,0 +1,56 @@
+LibrosTableSeeder
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\Libro;
+
+class LibrosTableSeeder extends Seeder
+{
+    public function run()
+    {
+        \App\Models\Libro::factory(50)->create();
+    }
+}
+
+UsuariosTableSeeder
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\Usuario;
+
+class UsuariosTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        \App\Models\Usuario::factory(50)->create();
+    }
+}
+
+PrestamosTableSeeder
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use App\Models\Prestamo;
+
+class PrestamosTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        \App\Models\Prestamo::factory(50)->create();
+    }
+}
