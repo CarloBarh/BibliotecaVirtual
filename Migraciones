@@ -88,8 +88,8 @@ return new class extends Migration
             $table->unsignedBigInteger('libro_id');
             $table->unsignedBigInteger('usuario_id');
             $table->timestamps();
-            $table->foreign('libro_id')->references('id')->on('libros');
-            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('libro_id')->references('id')->on('libros')->onDelete('cascade');
+            $table->foreign('usuario_id')->references('id')->on('usuarios')->onDelete('cascade');
         });
     }
 
